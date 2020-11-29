@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <title>Dashboard - Bioner</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        #background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url('dist/images/bg1.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        .card-gradient {
+            background: rgb(121, 9, 9);
+            background: linear-gradient(0deg, rgba(121, 9, 9, 1) 0%, rgba(209, 0, 0, 1) 100%);
+        }
+
+        #piehole {
+            position: relative;
+            top: 305px;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body class="text-white bg-dark">
+    <video autoplay loop muted poster="dist/images/bg1.jpg" id="background">
+        <source src="video/video_background_website.mp4" type="video/mp4">
+    </video>
+    <div class="clearfix">
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <a class="navbar-brand" href="#">Fixed bottom</a>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mt-3 mb-3 text-right">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#notificationModal">
+                    <i class="fas fa-bell fa-fw"></i> <span class="badge badge-light">4</span>
+                </button>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="font-weight-bold" style="color: #ff0000;"><b>Hello, Nama
+                                Saya</b></h4>
+                        <p class="font-weight-bold">Start mining in your future!</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a data-fancybox="gallery"
+                            href="https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png">
+                            <img src="https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png"
+                                class="img-fluid" alt="QR CODE" style="max-width: 100px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-1 mb-1 text-center">
+                <div class="card card-gradient shadow-lg mt-2 mb-2">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h3 class="text-left mb-0">24 <small>Member</small></h3>
+                            </div>
+                            <div class="col-5 text-right">
+                                <i class="fas fa-users fa-3x"></i>
+                            </div>
+                            <div class="col-12 text-right">
+                                Total Refferal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-1 mb-1 text-center">
+                <div class="card card-gradient shadow-lg mt-2 mb-2">
+                    <div class="card-body">
+                        <h3 class="text-left mb-0">Your Refferal Link:</h3>
+                        <h5 class="text-left mb-0 mt-3">
+                            http://bioner.co/?reff=tebe01
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 text-center">
+                <div id="piehole">
+                    <h3 class="font-weight-bold" style="font-size: 20px;">Rp. 100.000.000</h3>
+                    <br />
+                    <h5 class="font-weight-bold" style="font-size: 10px;">75% to Target</h5>
+                </div>
+                <div id="piechart" width="100%" height="100%" style="min-height: 500px;">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-1 mb-1 text-center">
+                <div class="card card-gradient shadow-lg">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h3 class="text-left mb-0">0.14 B</h3>
+                            </div>
+                            <div class="col-5 text-right">
+                                <i class="fas fa-chart-bar fa-3x"></i>
+                            </div>
+                            <div class="col-12 text-right">
+                                Profit Ballance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-1 mb-1 text-center">
+                <div class="card card-gradient shadow-lg">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h3 class="text-left mb-0">59.40 B</h3>
+                            </div>
+                            <div class="col-5 text-right">
+                                <i class="fas fa-chart-bar fa-3x"></i>
+                            </div>
+                            <div class="col-12 text-right">
+                                Bonus Ballance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-1 mb-1 text-center">
+                <div class="card card-gradient shadow-lg">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h3 class="text-left mb-0">270.00 B</h3>
+                            </div>
+                            <div class="col-5 text-right">
+                                <i class="fas fa-chart-pie fa-3x"></i>
+                            </div>
+                            <div class="col-12 text-right">
+                                Total Investment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-1 mb-1 text-center">
+                <div class="card card-gradient shadow-lg">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h3 class="text-left mb-0">0.00 B</h3>
+                            </div>
+                            <div class="col-5 text-right">
+                                <i class="fas fa-wallet fa-3x"></i>
+                            </div>
+                            <div class="col-12 text-right">
+                                Total Cash Ballance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-5"><br /></div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fa fa-times text-black"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action">
+                            <i class="fa fa-exclamation-circle fa-fw"></i> Transfer Cash Poin Wallet ballance wallet
+                            <br />
+                            <small>1 Week ago</small>
+                        </li>
+                        <li class="list-group-item list-group-item-action">
+                            <i class="fa fa-exclamation-circle fa-fw"></i> Transfer Cash Poin Wallet ballance wallet
+                            <br />
+                            <small>2 Week ago</small>
+                        </li>
+                        <li class="list-group-item list-group-item-action">
+                            <i class="fa fa-exclamation-circle fa-fw"></i> Transfer Cash Poin Wallet ballance wallet
+                            <br />
+                            <small>3 Week ago</small>
+                        </li>
+                        <li class="list-group-item list-group-item-action">
+                            <i class="fa fa-exclamation-circle fa-fw"></i> Transfer Cash Poin Wallet ballance wallet
+                            <br />
+                            <small>4 Week ago</small>
+                        </li>
+                        <li class="list-group-item list-group-item-action">
+                            <i class="fa fa-exclamation-circle fa-fw"></i> Transfer Cash Poin Wallet ballance wallet
+                            <br />
+                            <small>5 Week ago</small>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script src="vendor/fontawesome-free-5.15.1-web/js/all.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            packages: ['corechart']
+        }).then(function () {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Goals'],
+                ['Current', 230],
+                ['Remain', 70],
+            ]);
+
+            var options = {
+                title: 'Mining Progress',
+                pieHole: 0.9,
+                backgroundColor: {
+                    fill: 'transparent'
+                },
+                is3D: false,
+                legend: {
+                    position: 'none'
+                },
+                title: null,
+                tooltip: {
+                    text: `value %`,
+                    isHTML: true
+                },
+                pieSliceText: 'none'
+            };
+
+            var container = document.getElementById('piechart');
+            var chart = new google.visualization.PieChart(container);
+            var overlay = document.getElementById('pieHoleOverlay');
+
+            chart.draw(data, options);
+            window.addEventListener('resize', function () {
+                chart.draw(data, options);
+            }, false);
+        });
+    </script>
+
+</body>
+
+</html>
