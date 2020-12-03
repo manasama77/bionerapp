@@ -46,6 +46,20 @@
             color: #fff;
             z-index: 9999;
         }
+
+        .bg-faded {
+            background: linear-gradient(0deg, rgba(121, 9, 9, 1) 0%, rgba(209, 0, 0, 1) 100%);
+            border-top: rgb(255, 255, 255) 1px solid;
+        }
+
+        .btn-special {
+            background: linear-gradient(0deg, rgba(121, 9, 9, 1) 0%, rgba(209, 0, 0, 1) 100%);
+            border: #fff 1px solid;
+        }
+
+        .modal-special {
+            background: rgba(0, 0, 0, 0.9) !important;
+        }
     </style>
 </head>
 
@@ -53,12 +67,15 @@
     <video autoplay loop muted poster="dist/images/bg1.jpg" id="background">
         <source src="video/video_background_website.mp4" type="video/mp4">
     </video>
-    <div class="clearfix">
-        <nav class="navbar fixed-bottom navbar-light bg-light">
-            <a class="navbar-brand" href="#">Fixed bottom</a>
-        </nav>
-    </div>
-    <div class="container-fluid">
+    <nav class="navbar fixed-bottom navbar-light bg-light text-dark bg-faded">
+        <ul class="nav navbar-nav navbar-logo mx-auto">
+            <li class="nav-item">
+                <button type="button" class="btn btn-danger btn-lg text-center btn-special" data-toggle="modal"
+                    data-target="#menuModal"><i class="fa fa-bars"></i></button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
         <div class="row">
             <div class="col-12 mt-3 mb-3 text-right">
                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#notificationModal">
@@ -110,13 +127,33 @@
             </div>
 
 
-            <div class="col-12 text-center">
-                <div id="piehole">
+            <div class="col-12 text-center mx-auto my-auto">
+                <!-- <div id="piehole">
                     <h3 class="font-weight-bold" style="font-size: 20px;">Rp. 100.000.000</h3>
                     <br />
                     <h5 class="font-weight-bold" style="font-size: 10px;">75% to Target</h5>
                 </div>
                 <div id="piechart" width="100%" height="100%" style="min-height: 500px;">
+                </div> -->
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Rp.100.000.000</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-1">
+                        <p>0%</p>
+                    </div>
+                    <div class="col-10">
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated"
+                                role="progressbar" style="width: 33.33%" aria-valuenow="100" aria-valuemin="0"
+                                aria-valuemax="300">100%</div>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <p>300%</p>
+                    </div>
                 </div>
             </div>
 
@@ -240,16 +277,106 @@
         </div>
     </div>
 
+    <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document" style="margin-top: 10vh;">
+            <div class="modal-content modal-special text-white">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">MENU</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
+                <div class="modal-body text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-home fa-2x fa-fw"></i>
+                                </button>
+                                <p>Dashboard</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-cog fa-2x fa-fw"></i>
+                                </button>
+                                <p>Setting</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-user-shield fa-2x fa-fw"></i>
+                                </button>
+                                <p>Secure</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-chart-pie fa-2x fa-fw"></i>
+                                </button>
+                                <p>Investment</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-wallet fa-2x fa-fw"></i>
+                                </button>
+                                <p>Cash Wallet</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-chart-bar fa-2x fa-fw"></i>
+                                </button>
+                                <p>Funds</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-users fa-2x fa-fw"></i>
+                                </button>
+                                <p>Network</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-user-plus fa-2x fa-fw"></i>
+                                </button>
+                                <p>Register</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-sign-out-alt fa-2x fa-fw"></i>
+                                </button>
+                                <p>Sign out</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
     <script src="vendor/fontawesome-free-5.15.1-web/js/all.min.js"></script>
