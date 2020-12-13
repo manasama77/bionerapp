@@ -1,0 +1,3 @@
+[2020-12-13 23:54:30.058] [sharedprocess] [info] main {"machineId":"7e475f1707cf9db4eb4874bf88dcf932007331525d43755b6a812852bb33e79e","windowId":2}
+[2020-12-13 23:54:30.154] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/adam/Desktop/bionerapp/~/.vscode-root/User/snippets'
+[2020-12-13 23:55:10.079] [sharedprocess] [info] Starting to clean up unused language packs.

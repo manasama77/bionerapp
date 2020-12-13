@@ -1,0 +1,112 @@
+$bg-black: #020419;
+$white: #fff;
+$placeholder: #ccc;
+
+::placeholder {
+  color: $placeholder;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder;
+}
+
+::-ms-input-placeholder {
+  color: $placeholder;
+}
+
+body {
+  background-color: $bg-black;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.container-fluid>.row>.col-12.text-center {
+  height: 20vh;
+}
+
+#logo {
+  // width: 25vmin;
+  margin-top: 3vh;
+  height: 20vh;
+}
+
+@media only screen and (max-width: 1360px) {
+
+  .card-login-header {
+    background-color: $white;
+    position: relative;
+    left: 30vw;
+    width: 40vw;
+    margin-top: 10vh;
+    border-top-left-radius: 18vw;
+    border-top-right-radius: 18vw;
+    height: 8vh;
+  }
+
+  .card-login-content {
+    background-color: $white;
+    position: absolute;
+    left: 30vw;
+    top: 41.9vh;
+    width: 40vw;
+    height: 58vh;
+
+    span {
+      color: red;
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-login-header {
+    background-color: $white;
+    position: relative;
+    left: 0vw;
+    width: 100vw;
+    margin-top: 10vh;
+    border-top-left-radius: 18vw;
+    border-top-right-radius: 18vw;
+    height: 8vh;
+  }
+
+  .card-login-content {
+    background-color: $white;
+    position: absolute;
+    top: 38vh;
+    left: 0vw;
+    width: 100vw;
+    height: 10vh;
+
+    span {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card-login-header {
+    background-color: $white;
+    position: relative;
+    left: 0vw;
+    width: 100vw;
+    margin-top: 10vh;
+    border-top-left-radius: 18vw;
+    border-top-right-radius: 18vw;
+    height: 5vh;
+  }
+
+  .card-login-content {
+    background-color: $white;
+    position: absolute;
+    top: 38vh;
+    left: 0vw;
+    width: 100vw;
+    height: 62vh;
+
+    span {
+      font-size: 1.1em;
+    }
+  }
+}
